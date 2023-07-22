@@ -60,7 +60,7 @@ public class Gmail extends Email {
             return message;
         }
 
-        return null;
+        return "";
 
     }
 
@@ -70,8 +70,9 @@ public class Gmail extends Email {
         
         if(inbox.size() > 0) {
             String message = inbox.get(0).getMessage();
+            return message;
         }
-        return null;
+        return "";
 
     }
 
