@@ -52,26 +52,26 @@ public class Gmail extends Email {
     public String findLatestMessage(){
         /* If the inbox is empty, return null
          Else, return the message of the latest mail present in the inbox */
-
-        String message = "";
+        
         if(inbox.size() > 0) {
 
             int lastIndex = inbox.size() - 1;
-            message = inbox.get(lastIndex).getMessage();
+            String message = inbox.get(lastIndex).getMessage();
+            return message;
         }
 
-        return message;
+        return null;
 
     }
 
     public String findOldestMessage(){
         /* If the inbox is empty, return null
          Else, return the message of the oldest mail present in the inbox */
-        String message = "";
+        
         if(inbox.size() > 0) {
-            message = inbox.get(0).getMessage();
+            String message = inbox.get(0).getMessage();
         }
-        return message;
+        return null;
 
     }
 
