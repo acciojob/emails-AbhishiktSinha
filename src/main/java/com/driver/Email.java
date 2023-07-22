@@ -58,14 +58,10 @@ public class Email {
 
                 if(valid) {
                     this.password = newPassword;
-                    System.out.println("Password set successfully");
                     return;
                 }
             }
         }
-
-            System.out.println("Invalid password");
-            return;
 
     }
 }
