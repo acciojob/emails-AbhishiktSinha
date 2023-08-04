@@ -52,8 +52,9 @@ public class Gmail extends Email {
         Mail newMail = new Mail(date, sender, message);
 
         if(inbox.size() == this.inboxCapacity) {
-            String oldest = findOldestMessage();
-            deleteMail(oldest);
+            Mail oldestMail = inbox.get(0);
+            inbox.remove(0);
+            trash.add(oldestMail);
         }
 
         inbox.add(newMail);
